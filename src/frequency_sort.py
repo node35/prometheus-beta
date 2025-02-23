@@ -27,4 +27,4 @@ def sort_by_frequency(numbers: List[int]) -> List[int]:
     freq_counter = Counter(numbers)
     
     # Sort the list based on frequency (ascending) and then by the number itself
-    return sorted(numbers, key=lambda x: (freq_counter[x], x))
+    return sorted(numbers, key=lambda x: (freq_counter[x], numbers.index(x)))
